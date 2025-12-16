@@ -77,7 +77,7 @@ export default function Home() {
       {/* ▼ 導入事例への誘導（またはお問い合わせ） */}
       <section className="py-20 px-6 text-center">
         <h2 className="text-3xl font-bold mb-8 text-gray-800">
-          まずは1週間から<br className="md:hidden" />試してみませんか？
+          まずは1ヶ月から<br className="md:hidden" />試してみませんか？
         </h2>
         <p className="text-xl text-gray-600 mb-10">
           敷地の広さや草の状況に合わせて、<br />最適なプランをご提案します。
