@@ -1,28 +1,31 @@
-import "./globals.css";
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
+// ▼ 作った部品をインポート
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
-// 1. サイトのメタデータを定義
+const inter = Inter({ subsets: ["latin"] });
+
 export const metadata: Metadata = {
-  title: "Simple Next App",
-  description: "Next.jsの基本学習",
+  title: "ヤギレンタル",
+  description: "癒やしのヤギをお届けします",
 };
 
-// 2. ルートレイアウトの関数定義
-// children は、このレイアウトが囲む各ページの中身（app/page.tsx の内容）
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
     <html lang="ja">
-      <body>
+      <body className={inter.className}>
+        {/* ▼ たったこれだけでOK！ */}
+        <Header />
 
-        {/* 3. ページごとの中身（Hello Next.js! の部分）がここに入ります */}
-        <main style={{ padding: '20px' }}>
-          {children}
-        </main>
+        {children}
 
+        <Footer />
       </body>
     </html>
   );
