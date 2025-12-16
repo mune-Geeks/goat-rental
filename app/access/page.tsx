@@ -18,13 +18,13 @@ export default function AccessPage() {
             <dl className="space-y-4">
               <div>
                 <dt className="font-bold text-gray-600">店名</dt>
-                <dd>ヤギレンタル 東京本店</dd>
+                <dd>山門ファーム</dd>
               </div>
               <div>
                 <dt className="font-bold text-gray-600">住所</dt>
                 <dd>
-                  〒100-0005<br />
-                  東京都千代田区丸の内１丁目<br />
+                  〒513-0836<br />
+                  三重県鈴鹿市国府町2291<br />
                   （ヤギ牧場併設）
                 </dd>
               </div>
@@ -36,10 +36,10 @@ export default function AccessPage() {
           </section>
 
           <section>
-            <h2 className="text-xl font-bold mb-4 border-b pb-2">運営会社</h2>
+            <h2 className="text-xl font-bold mb-4 border-b pb-2">運営者</h2>
             <p className="text-gray-600">
-              株式会社ヤギ・コーポレーション<br />
-              代表取締役：八木 太郎
+              山門ファーム<br />
+              吉田 常嘉
             </p>
           </section>
         </div>
@@ -47,7 +47,7 @@ export default function AccessPage() {
         {/* 右側：Googleマップ */}
         <div className="h-64 md:h-auto bg-gray-200 rounded-lg overflow-hidden shadow-md">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.82803077274!2d139.76454987606622!3d35.68123617258712!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bfbd89f7007%3A0x277c49ba34ed38!2z5p2x5Lqs6aeF!5e0!3m2!1sja!2sjp!4v1709600000000!5m2!1sja!2sjp"
+            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d9439.718921799813!2d136.51270348694732!3d34.85730616645298!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzTCsDUxJzI5LjgiTiAxMzbCsDMwJzQ1LjMiRQ!5e0!3m2!1sja!2sjp!4v1765908575507!5m2!1sja!2sjp"
             width="100%"
             height="100%"
             style={{ border: 0, minHeight: '300px' }}
