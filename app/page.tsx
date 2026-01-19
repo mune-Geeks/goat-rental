@@ -20,19 +20,14 @@ export default function Home() {
 
         {/* キャッチコピー */}
         <div className="absolute inset-0 flex flex-col items-center justify-center text-white px-4 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 drop-shadow-md">
-            庭の草刈り、<br className="md:hidden" />ヤギにお任せ。
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 drop-shadow-md leading-tight">
+            次世代の除草は、<br className="md:hidden" />ヤギでした。
           </h1>
           <p className="text-xl md:text-2xl mb-8 font-medium drop-shadow-md">
-            環境にやさしく、心も癒やす。<br />
-            新しい除草のカタチです。
+            企業の敷地管理から、ご家庭のお庭まで<br />
+            環境に優しく、コストも抑える「次世代の除草パートナー」です。
           </p>
-          <Link
-            href="/service"
-            className="bg-green-600 hover:bg-green-700 text-white text-xl font-bold py-4 px-10 rounded-full shadow-lg transition transform hover:scale-105"
-          >
-            サービス・料金を見る
-          </Link>
+
         </div>
       </div>
 
@@ -77,10 +72,11 @@ export default function Home() {
       {/* ▼ 導入事例への誘導（またはお問い合わせ） */}
       <section className="py-20 px-6 text-center">
         <h2 className="text-3xl font-bold mb-8 text-gray-800">
-          まずは1ヶ月から<br className="md:hidden" />試してみませんか？
+          まずはヤギに<br className="md:hidden" />触れてみませんか？
         </h2>
         <p className="text-xl text-gray-600 mb-10">
-          敷地の広さや草の状況に合わせて、<br />最適なプランをご提案します。
+          ふれあい体験も実施しています。<br />お気軽にお問い合わせください。
+
         </p>
         <Link
           href="/contact"

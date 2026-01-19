@@ -17,7 +17,6 @@ export default function ServicePage() {
         {/* ▼ 料金プランセクション */}
         <section className="mb-20">
           <h2 className="text-2xl font-bold mb-8 text-center flex items-center justify-center gap-2">
-            <span>💰</span>
             <span>分かりやすい2つのプラン</span>
           </h2>
 
@@ -29,39 +28,30 @@ export default function ServicePage() {
               </div>
               <h3 className="text-2xl font-bold mb-2">お試し除草プラン</h3>
               <div className="text-4xl font-bold text-green-700 mb-4">
-                ¥15,000 <span className="text-base text-gray-500 font-normal">/ 1週間</span>
+                1週間〜1ヶ月
               </div>
               <p className="text-gray-600 leading-relaxed mb-6">
                 「本当に除草できるの？」と不安な方向けのトライアル期間です。
-                約50坪までの広さに対応しています。
               </p>
               <ul className="text-gray-600 space-y-2">
-                <li className="flex items-center gap-2">✅ ヤギ1頭</li>
-                <li className="flex items-center gap-2">✅ 柵の設置込み</li>
-                <li className="flex items-center gap-2">✅ 健康チェック付き</li>
+                <li className="flex items-center gap-2">✅ ヤギ2頭〜</li>
               </ul>
             </div>
 
             {/* プランB */}
             <div className="bg-white p-8 rounded-3xl shadow-md border-2 border-green-500 relative overflow-hidden">
-              <div className="absolute top-0 right-0 bg-green-500 text-white text-sm font-bold px-6 py-1 rounded-bl-xl">
-                人気 No.1
-              </div>
               <div className="bg-green-100 text-green-800 font-bold inline-block px-4 py-1 rounded-full mb-4">
                 しっかり綺麗に
               </div>
               <h3 className="text-2xl font-bold mb-2">定期レンタルプラン</h3>
               <div className="text-4xl font-bold text-green-700 mb-4">
-                ¥50,000 <span className="text-base text-gray-500 font-normal">/ 1ヶ月</span>
+                1ヶ月〜12ヶ月
               </div>
               <p className="text-gray-600 leading-relaxed mb-6">
                 広い敷地や、継続的に雑草を管理したい方におすすめです。
-                2頭以上のレンタルもご相談可能です。
               </p>
               <ul className="text-gray-600 space-y-2">
-                <li className="flex items-center gap-2">✅ ヤギ1頭〜</li>
-                <li className="flex items-center gap-2">✅ 柵の設置・移動込み</li>
-                <li className="flex items-center gap-2">✅ 定期メンテナンス</li>
+                <li className="flex items-center gap-2">✅ ヤギ2頭〜</li>
               </ul>
             </div>
           </div>
@@ -83,8 +73,7 @@ export default function ServicePage() {
               <div>
                 <h3 className="text-xl font-bold mb-2 text-green-800">お問い合わせ</h3>
                 <p className="text-gray-600 text-lg">
-                  まずはフォーム、またはお電話にてご連絡ください。
-                  「どれくらいの広さか」「どんな草が生えているか」をお伺いします。
+                  まずはフォームよりご連絡ください。<br /> 少人数で運営しているため、お電話ではなくフォームからの受付とさせていただいております。いただいた内容は担当者が確認し、可能な限り当日中に折り返しご連絡いたします。
                 </p>
               </div>
             </div>
@@ -97,8 +86,7 @@ export default function ServicePage() {
               <div>
                 <h3 className="text-xl font-bold mb-2 text-green-800">現地調査・お見積り</h3>
                 <p className="text-gray-600 text-lg">
-                  スタッフが現地に伺い、ヤギが安全に過ごせる環境か確認します。
-                  その場で正確なお見積りを提示します。
+                  スタッフが現地へ伺います。 実際に現地を見て、環境の確認や「どんなオプションが必要か」などをご相談させていただきます。最適なプランとお見積もりは、後日改めてご提示いたします。
                 </p>
               </div>
             </div>
@@ -109,10 +97,9 @@ export default function ServicePage() {
                 3
               </div>
               <div>
-                <h3 className="text-xl font-bold mb-2 text-green-800">ヤギのお届け</h3>
+                <h3 className="text-xl font-bold mb-2 text-green-800">ご契約・サービス開始</h3>
                 <p className="text-gray-600 text-lg">
-                  契約成立後、ご指定の日時にヤギと柵をお持ちします。
-                  その日から除草スタートです！
+                  いよいよヤギとの生活がスタート！ <br />正式なご契約の後、ご指定の日時からレンタル開始です。ヤギの送迎（オプション）やお引き渡し方法についても、柔軟に対応いたします。
                 </p>
               </div>
             </div>

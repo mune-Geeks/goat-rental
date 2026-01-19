@@ -18,7 +18,7 @@ export default function AccessPage() {
             <dl className="space-y-4">
               <div>
                 <dt className="font-bold text-gray-600">店名</dt>
-                <dd>山門ファーム</dd>
+                <dd>山門牧場</dd>
               </div>
               <div>
                 <dt className="font-bold text-gray-600">住所</dt>
@@ -38,7 +38,7 @@ export default function AccessPage() {
           <section>
             <h2 className="text-xl font-bold mb-4 border-b pb-2">運営者</h2>
             <p className="text-gray-600">
-              山門ファーム<br />
+              山門牧場<br />
               吉田 常嘉
             </p>
           </section>

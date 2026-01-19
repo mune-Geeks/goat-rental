@@ -58,22 +58,6 @@ export default function ContactPage() {
           />
         </div>
 
-        {/* メールアドレス */}
-        <div className="mb-6">
-          <label className="block text-gray-700 font-bold mb-2" htmlFor="email">
-            メールアドレス <span className="text-red-500 text-sm">*</span>
-          </label>
-          <input
-            id="email"
-            type="email"
-            className="w-full border border-gray-300 p-3 rounded-lg focus:outline-none focus:border-green-500 transition"
-            placeholder="例：taro@example.com"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-        </div>
-
         {/* ▼ 追加：電話番号 */}
         <div className="mb-6">
           <label className="block text-gray-700 font-bold mb-2" htmlFor="phone">
@@ -90,6 +74,23 @@ export default function ContactPage() {
           />
           <p className="text-sm text-gray-500 mt-1">※日中連絡のつく番号をご記入ください</p>
         </div>
+
+        {/* メールアドレス */}
+        <div className="mb-6">
+          <label className="block text-gray-700 font-bold mb-2" htmlFor="email">
+            メールアドレス
+          </label>
+          <input
+            id="email"
+            type="email"
+            className="w-full border border-gray-300 p-3 rounded-lg focus:outline-none focus:border-green-500 transition"
+            placeholder="例：taro@example.com"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+        </div>
+
+
 
         {/* お問い合わせ内容（プレースホルダー追加） */}
         <div className="mb-8">
