@@ -18,16 +18,19 @@ export default function Header() {
                 <Link
                     href="/"
                     onClick={closeMenu}
-                    className="text-base sm:text-xl md:text-3xl font-bold text-green-800 hover:opacity-80 transition flex items-center gap-2"
+                    className="text-sm sm:text-lg md:text-2xl font-bold text-green-800 hover:opacity-80 transition flex items-center gap-2"
                 >
                     <span>🐐</span>
-                    <span>ヤギレンタル｜山門牧場@鈴鹿</span>
+                    <span>ヤギレンタル・販売｜山門牧場@鈴鹿</span>
                 </Link>
 
                 {/* ▼ PC用メニュー（スマホでは隠す） */}
                 <nav className="hidden md:flex items-center gap-8 text-lg font-medium text-gray-700">
                     <Link href="/service" className="hover:text-green-600 transition">
-                        サービス・料金
+                        ヤギレンタル
+                    </Link>
+                    <Link href="/sales" className="hover:text-green-600 transition">
+                        ヤギ販売
                     </Link>
                     <Link href="/about-goat" className="hover:text-green-600 transition">
                         ヤギの生態
@@ -71,7 +74,14 @@ export default function Header() {
                         onClick={closeMenu}
                         className="text-xl font-bold text-gray-700 py-3 border-b border-gray-100"
                     >
-                        サービス・料金
+                        ヤギレンタル
+                    </Link>
+                    <Link
+                        href="/sales"
+                        onClick={closeMenu}
+                        className="text-xl font-bold text-gray-700 py-3 border-b border-gray-100"
+                    >
+                        ヤギ販売
                     </Link>
                     <Link
                         href="/about-goat"
