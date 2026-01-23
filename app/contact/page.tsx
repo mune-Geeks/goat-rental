@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { submitContactData } from '@/actions/contact';
+import { sendContact } from '@/actions/contact';
 
 export default function ContactPage() {
   const [name, setName] = useState('');
@@ -16,7 +16,7 @@ export default function ContactPage() {
 
     try {
       // ▼ ここで phone も一緒にサーバーへ送る
-      const result = await submitContactData(name, email, phone, message);
+      const result = await sendContact(name, email, phone, message);
 
       if (result.success) {
         alert('送信しました！担当者よりお電話にてご連絡いたします。');
