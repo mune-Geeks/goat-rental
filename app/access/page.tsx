@@ -14,11 +14,11 @@ export default function AccessPage() {
         {/* 左側：会社情報 */}
         <div className="space-y-6">
           <section>
-            <h2 className="text-xl font-bold mb-4 border-b pb-2">店舗情報</h2>
+            <h2 className="text-xl font-bold mb-4 border-b pb-2">会社情報</h2>
             <dl className="space-y-4">
               <div>
                 <dt className="font-bold text-gray-600">店名</dt>
-                <dd>山門牧場</dd>
+                <dd>山門牧場（ヤマカドボクジョウ）</dd>
               </div>
               <div>
                 <dt className="font-bold text-gray-600">住所</dt>
@@ -30,7 +30,7 @@ export default function AccessPage() {
               </div>
               <div>
                 <dt className="font-bold text-gray-600">営業時間</dt>
-                <dd>9:00 〜 18:00（定休日：水曜日）</dd>
+                <dd>9:00 〜 18:00</dd>
               </div>
             </dl>
           </section>

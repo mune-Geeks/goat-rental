@@ -21,7 +21,7 @@ export default function Header() {
                     className="text-sm sm:text-lg md:text-2xl font-bold text-green-800 hover:opacity-80 transition flex items-center gap-2"
                 >
                     <span>🐐</span>
-                    <span>ヤギレンタル・販売｜山門牧場@鈴鹿</span>
+                    <span>ヤギレンタル｜山門牧場@鈴鹿</span>
                 </Link>
 
                 {/* ▼ PC用メニュー（スマホでは隠す） */}
@@ -29,9 +29,7 @@ export default function Header() {
                     <Link href="/service" className="hover:text-green-600 transition">
                         ヤギレンタル
                     </Link>
-                    <Link href="/sales" className="hover:text-green-600 transition">
-                        ヤギ販売
-                    </Link>
+
                     <Link href="/about-goat" className="hover:text-green-600 transition">
                         ヤギの生態
                     </Link>
@@ -76,13 +74,7 @@ export default function Header() {
                     >
                         ヤギレンタル
                     </Link>
-                    <Link
-                        href="/sales"
-                        onClick={closeMenu}
-                        className="text-xl font-bold text-gray-700 py-3 border-b border-gray-100"
-                    >
-                        ヤギ販売
-                    </Link>
+
                     <Link
                         href="/about-goat"
                         onClick={closeMenu}
