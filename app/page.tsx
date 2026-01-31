@@ -19,7 +19,15 @@ export default function Home() {
         <div className="absolute inset-0 bg-black/40"></div>
 
         {/* キャッチコピー */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-white px-4 text-center">
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-white px-4 text-center pb-24">
+          <div className="bg-white/90 text-green-800 px-6 py-4 rounded-xl shadow-lg max-w-2xl backdrop-blur-sm mb-6">
+            <p className="text-lg md:text-xl font-bold">
+              🌸 春の除草シーズンに向けて 🌸
+            </p>
+            <p className="mt-2 text-base md:text-lg">
+              暖かくなり雑草が伸び始める春に向けた、<br className="md:hidden" />ヤギレンタルのご予約も受け付けています。
+            </p>
+          </div>
           <h1 className="text-4xl md:text-6xl font-bold mb-6 drop-shadow-md leading-tight">
             次世代の除草は、<br className="md:hidden" />ヤギでした。
           </h1>
@@ -28,14 +36,7 @@ export default function Home() {
             環境に優しく、コストも抑える「次世代の除草パートナー」です。
           </p>
 
-          <div className="bg-white/90 text-green-800 px-6 py-4 rounded-xl shadow-lg max-w-2xl backdrop-blur-sm">
-            <p className="text-lg md:text-xl font-bold">
-              🌸 春の除草シーズンに向けて 🌸
-            </p>
-            <p className="mt-2 text-base md:text-lg">
-              暖かくなり雑草が伸び始める春に向けた、<br className="md:hidden" />ヤギレンタルのご予約も受け付けています。
-            </p>
-          </div>
+
 
         </div>
       </div>
