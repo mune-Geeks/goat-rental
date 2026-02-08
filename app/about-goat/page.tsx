@@ -53,6 +53,22 @@ export default function AboutGoatPage() {
     {
       src: "/yagi_member_6.jpg",
       alt: "こちらを見つめるヤギ"
+    },
+    {
+      src: "/yagi_member_7.jpg",
+      alt: "こちらを見つめるヤギ"
+    },
+    {
+      src: "/yagi_member_8.jpg",
+      alt: "こちらを見つめるヤギ"
+    },
+    {
+      src: "/yagi_member_9.jpg",
+      alt: "こちらを見つめるヤギ"
+    },
+    {
+      src: "/yagi_member_10.jpg",
+      alt: "こちらを見つめるヤギ"
     }
   ];
 
