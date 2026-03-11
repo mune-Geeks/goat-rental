@@ -95,6 +95,36 @@ export default function Home() {
           お問い合わせ・ご相談
         </Link>
       </section>
+
+      {/* ▼ お知らせ：Instagramはじめました */}
+      <section className="pb-16 px-6">
+        <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between bg-white px-8 py-6 rounded-2xl shadow-sm border border-gray-100">
+          <div className="flex items-center mb-4 md:mb-0">
+            {/* Instagramアイコン（グラデーション） */}
+            <div className="mr-5 bg-gradient-to-tr from-yellow-400 via-red-500 to-pink-500 p-2.5 rounded-xl text-white shadow-sm">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-7 h-7">
+                <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" x2="17.51" y1="6.5" y2="6.5" />
+              </svg>
+            </div>
+            <div>
+              <h2 className="text-xl md:text-2xl font-bold mb-1 text-gray-800">Instagramはじめました！</h2>
+              <p className="text-gray-600 text-sm md:text-base">
+                日々のヤギたちの様子をお届けしています🐐✨
+              </p>
+            </div>
+          </div>
+          <Link
+            href="https://www.instagram.com/meemee_yagi3?igsh=dWtob3V0eGNsdzYw"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="whitespace-nowrap bg-gradient-to-r from-pink-500 to-red-500 text-white hover:opacity-90 font-bold py-2.5 px-6 rounded-full shadow-sm transition-all text-sm md:text-base"
+          >
+            フォローする
+          </Link>
+        </div>
+      </section>
     </main>
   );
 }
