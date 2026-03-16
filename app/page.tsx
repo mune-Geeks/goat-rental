@@ -116,7 +116,7 @@ export default function Home() {
             </div>
           </div>
           <Link
-            href="https://www.instagram.com/meemee_yagi3?igsh=dWtob3V0eGNsdzYw"
+            href="https://www.instagram.com/yamakado_suzuka?igsh=dWtob3V0eGNsdzYw"
             target="_blank"
             rel="noopener noreferrer"
             className="whitespace-nowrap bg-gradient-to-r from-pink-500 to-red-500 text-white hover:opacity-90 font-bold py-2.5 px-6 rounded-full shadow-sm transition-all text-sm md:text-base"
