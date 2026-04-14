@@ -5,8 +5,9 @@ import { sendContact } from '@/actions/contact';
 
 export default function ContactPage() {
   const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
   const [phone, setPhone] = useState(''); // 👈 追加：電話番号の状態管理
+  const [heardFrom, setHeardFrom] = useState('');
+  const [rentalPeriod, setRentalPeriod] = useState('');
   const [message, setMessage] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
 
@@ -15,14 +16,15 @@ export default function ContactPage() {
     setIsSubmitting(true);
 
     try {
-      // ▼ ここで phone も一緒にサーバーへ送る
-      const result = await sendContact(name, email, phone, message);
+      // ▼ ここで phone 等も一緒にサーバーへ送る
+      const result = await sendContact(name, phone, heardFrom, rentalPeriod, message);
 
       if (result.success) {
         alert('送信しました！担当者よりお電話にてご連絡いたします。');
         setName('');
-        setEmail('');
         setPhone(''); // 👈 クリアする
+        setHeardFrom('');
+        setRentalPeriod('');
         setMessage('');
       }
     } catch (error) {
@@ -75,21 +77,39 @@ export default function ContactPage() {
           <p className="text-sm text-gray-500 mt-1">※日中連絡のつく番号をご記入ください</p>
         </div>
 
-        {/* メールアドレス */}
+        {/* 当サービスを知った経緯 */}
         <div className="mb-6">
-          <label className="block text-gray-700 font-bold mb-2" htmlFor="email">
-            メールアドレス
+          <label className="block text-gray-700 font-bold mb-2" htmlFor="heardFrom">
+            当サービスを何でお知りになりましたか？ <span className="text-red-500 text-sm">*</span>
           </label>
-          <input
-            id="email"
-            type="email"
+          <select
+            id="heardFrom"
             className="w-full border border-gray-300 p-3 rounded-lg focus:outline-none focus:border-green-500 transition"
-            placeholder="例：taro@example.com"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
+            value={heardFrom}
+            onChange={(e) => setHeardFrom(e.target.value)}
+            required
+          >
+            <option value="" disabled>-- 選択してください --</option>
+            <option value="知人から">知人から</option>
+            <option value="Instagramから">Instagramから</option>
+            <option value="その他">その他</option>
+          </select>
         </div>
 
+        {/* 希望レンタル期間 */}
+        <div className="mb-6">
+          <label className="block text-gray-700 font-bold mb-2" htmlFor="rentalPeriod">
+            希望レンタル期間
+          </label>
+          <input
+            id="rentalPeriod"
+            type="text"
+            className="w-full border border-gray-300 p-3 rounded-lg focus:outline-none focus:border-green-500 transition"
+            placeholder="例：1週間、1ヶ月など"
+            value={rentalPeriod}
+            onChange={(e) => setRentalPeriod(e.target.value)}
+          />
+        </div>
 
 
         {/* お問い合わせ内容（プレースホルダー追加） */}

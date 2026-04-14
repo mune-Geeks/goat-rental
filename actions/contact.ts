@@ -8,7 +8,7 @@ interface ContactState {
     success: boolean;
 }
 
-export async function sendContact(name: string, email: string, phone: string, message: string): Promise<ContactState> {
+export async function sendContact(name: string, phone: string, heardFrom: string, rentalPeriod: string, message: string): Promise<ContactState> {
     // フォームから値を取得する処理は不要になります
 
 
@@ -18,7 +18,7 @@ export async function sendContact(name: string, email: string, phone: string, me
         messages: [
             {
                 type: 'text',
-                text: `【お問い合わせ】\nお名前: ${name}\n電話番号: ${phone}\nメール: ${email}\n内容:\n${message}`,
+                text: `【お問い合わせ】\nお名前: ${name}\n電話番号: ${phone}\n知った経緯: ${heardFrom}\n希望レンタル期間: ${rentalPeriod}\n内容:\n${message}`,
             },
         ],
     };
