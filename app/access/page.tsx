@@ -39,7 +39,8 @@ export default function AccessPage() {
             <h2 className="text-xl font-bold mb-4 border-b pb-2">運営者</h2>
             <p className="text-gray-600">
               山門牧場<br />
-              吉田 常嘉
+              代表：吉田 常嘉<br />
+              TEL：090-8731-6414
             </p>
           </section>
         </div>

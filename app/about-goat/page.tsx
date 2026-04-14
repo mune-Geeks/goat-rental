@@ -31,19 +31,19 @@ export default function AboutGoatPage() {
   // ▼ 2. ヤギ紹介のデータ
   const goatPhotos = [
     {
-      src: "/yagi_member_1.jpg",
+      src: "/yagi_member_1v1.jpg",
       alt: "草を食むヤギ"
     },
     {
-      src: "/yagi_member_2.jpg",
+      src: "/yagi_member_2v1.jpg",
       alt: "丘の上に立つヤギ"
     },
     {
-      src: "/yagi_member_3.jpg",
+      src: "/yagi_member_3v1.jpg",
       alt: "こちらを見つめるヤギ"
     },
     {
-      src: "/yagi_member_4.jpg",
+      src: "/yagi_member_4v1.jpg",
       alt: "こちらを見つめるヤギ"
     },
     {
