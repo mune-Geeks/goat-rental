@@ -28,10 +28,12 @@ export default function ServicePage() {
               </div>
               <h3 className="text-2xl font-bold mb-2">お試し除草プラン</h3>
               <div className="text-4xl font-bold text-green-700 mb-4">
-                1週間〜1ヶ月
+                1日〜1ヶ月
               </div>
               <p className="text-gray-600 leading-relaxed mb-6">
-                「本当に除草できるの？」と不安な方向けのトライアル期間です。
+                「本当に除草できるの？」と不安な方向けのトライアル期間です。1日単位でお申し込み可能です。
+                <br />
+                1日1頭 500円から貸出可能です。
               </p>
               <ul className="text-gray-600 space-y-2">
                 <li className="flex items-center gap-2">✅ ヤギ2頭〜</li>
