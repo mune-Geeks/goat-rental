@@ -36,6 +36,9 @@ export default function Header() {
                     <Link href="/access" className="hover:text-green-600 transition">
                         アクセス
                     </Link>
+                    <Link href="/voice" className="hover:text-green-600 transition">
+                        お客様の声
+                    </Link>
                     <Link
                         href="/contact"
                         className="bg-green-600 text-white font-bold py-2.5 px-6 rounded-full shadow-md hover:bg-green-700 transition"
@@ -88,6 +91,14 @@ export default function Header() {
                         className="text-xl font-bold text-gray-700 py-3 border-b border-gray-100"
                     >
                         アクセス・会社概要
+                    </Link>
+
+                    <Link
+                        href="/voice"
+                        onClick={closeMenu}
+                        className="text-xl font-bold text-gray-700 py-3 border-b border-gray-100"
+                    >
+                        お客様の声
                     </Link>
 
                     {/* スマホメニュー内のデカいお問い合わせボタン */}
