@@ -8,9 +8,53 @@ interface ContactState {
     success: boolean;
 }
 
-export async function sendContact(name: string, phone: string, heardFrom: string, rentalPeriod: string, message: string): Promise<ContactState> {
-    // フォームから値を取得する処理は不要になります
+export interface ContactPayload {
+    name: string;
+    phone: string;
+    heardFrom: string;
+    serviceType: string;
+    rentalPeriod?: string;
+    ownerPlan?: string;
+    message: string;
+}
 
+export async function sendContact(
+    payloadOrName: ContactPayload | string,
+    phone?: string,
+    heardFrom?: string,
+    rentalPeriod?: string,
+    message?: string
+): Promise<ContactState> {
+    let nameVal = '';
+    let phoneVal = '';
+    let heardFromVal = '';
+    let serviceTypeVal = 'ヤギレンタル';
+    let rentalPeriodVal = '';
+    let ownerPlanVal = '';
+    let messageVal = '';
+
+    if (typeof payloadOrName === 'object') {
+        nameVal = payloadOrName.name;
+        phoneVal = payloadOrName.phone;
+        heardFromVal = payloadOrName.heardFrom;
+        serviceTypeVal = payloadOrName.serviceType;
+        rentalPeriodVal = payloadOrName.rentalPeriod || '';
+        ownerPlanVal = payloadOrName.ownerPlan || '';
+        messageVal = payloadOrName.message;
+    } else {
+        nameVal = payloadOrName;
+        phoneVal = phone || '';
+        heardFromVal = heardFrom || '';
+        rentalPeriodVal = rentalPeriod || '';
+        messageVal = message || '';
+    }
+
+    let detailLine = '';
+    if (serviceTypeVal === 'ヤギレンタル' && rentalPeriodVal) {
+        detailLine = `希望レンタル期間: ${rentalPeriodVal}\n`;
+    } else if (serviceTypeVal === 'マイヤギプロジェクト' && ownerPlanVal) {
+        detailLine = `希望オーナープラン: ${ownerPlanVal}\n`;
+    }
 
     // LINEに送るメッセージ
     const lineMessage = {
@@ -18,7 +62,7 @@ export async function sendContact(name: string, phone: string, heardFrom: string
         messages: [
             {
                 type: 'text',
-                text: `【お問い合わせ】\nお名前: ${name}\n電話番号: ${phone}\n知った経緯: ${heardFrom}\n希望レンタル期間: ${rentalPeriod}\n内容:\n${message}`,
+                text: `【お問い合わせ】\nお問い合わせ種別: ${serviceTypeVal}\nお名前: ${nameVal}\n電話番号: ${phoneVal}\n${detailLine}知った経緯: ${heardFromVal}\n内容:\n${messageVal}`,
             },
         ],
     };

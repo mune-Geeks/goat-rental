@@ -12,7 +12,7 @@ export default function Header() {
 
     return (
         <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 shadow-sm">
-            <div className="max-w-6xl mx-auto px-4 h-20 flex items-center justify-between">
+            <div className="max-w-7xl mx-auto px-6 lg:px-8 h-20 flex items-center justify-between">
 
                 {/* ▼ 左側：ロゴ */}
                 <Link
@@ -25,11 +25,13 @@ export default function Header() {
                 </Link>
 
                 {/* ▼ PC用メニュー（スマホでは隠す） */}
-                <nav className="hidden md:flex items-center gap-8 text-lg font-medium text-gray-700">
+                <nav className="hidden md:flex items-center gap-6 lg:gap-8 text-base lg:text-[17px] font-medium text-gray-700">
                     <Link href="/service" className="hover:text-green-600 transition">
                         ヤギレンタル
                     </Link>
-
+                    <Link href="/my-goat" className="hover:text-green-600 transition">
+                        マイヤギ
+                    </Link>
                     <Link href="/about-goat" className="hover:text-green-600 transition">
                         ヤギの生態
                     </Link>
@@ -77,7 +79,13 @@ export default function Header() {
                     >
                         ヤギレンタル
                     </Link>
-
+                    <Link
+                        href="/my-goat"
+                        onClick={closeMenu}
+                        className="text-xl font-bold text-gray-700 py-3 border-b border-gray-100"
+                    >
+                        マイヤギプロジェクト
+                    </Link>
                     <Link
                         href="/about-goat"
                         onClick={closeMenu}
