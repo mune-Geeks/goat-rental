@@ -216,6 +216,69 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ▼ 公式オリジナルグッズ（SUZURI）セクション */}
+      <section className="py-20 px-6 bg-gradient-to-b from-amber-50/50 via-orange-50/20 to-white">
+        <div className="max-w-5xl mx-auto">
+          <div className="bg-white rounded-3xl p-6 md:p-12 shadow-xl border border-amber-100 flex flex-col md:flex-row items-center gap-8 md:gap-12">
+            {/* 左側：グッズ画像 */}
+            <div className="relative w-full md:w-1/2 aspect-[16/10] rounded-2xl overflow-hidden shadow-md flex-shrink-0 bg-amber-50">
+              <Image
+                src="/suzuri_goods_banner.jpg"
+                alt="山門牧場のヤギオリジナルグッズ（Tシャツ・トートバッグ・マグカップ・ステッカー等）"
+                fill
+                className="object-cover hover:scale-105 transition-transform duration-500"
+              />
+              <span className="absolute top-3 left-3 bg-amber-700 text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm">
+                OFFICIAL GOODS
+              </span>
+            </div>
+
+            {/* 右側：テキストとボタン */}
+            <div className="flex-1 text-center md:text-left">
+              <span className="inline-block text-amber-800 bg-amber-100 font-bold px-3.5 py-1 rounded-full text-xs md:text-sm mb-3">
+                🛍️ オンラインストア限定販売
+              </span>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight mb-4">
+                山門牧場の<br className="hidden sm:inline" />
+                <span className="text-amber-700">オリジナルヤギグッズ</span>登場！
+              </h2>
+              <p className="text-gray-600 text-sm md:text-base leading-relaxed mb-6">
+                日常にヤギたちの癒やしをお届けする公式グッズができました！<br />
+                定番のTシャツやパーカー、毎日使えるトートバッグ、可愛いステッカーやマグカップなど豊富なアイテムをご用意しています。
+              </p>
+
+              {/* アイテムタグ */}
+              <div className="flex flex-wrap justify-center md:justify-start gap-2 mb-8">
+                <span className="bg-amber-50 text-amber-900 border border-amber-200/60 text-xs font-semibold px-3 py-1 rounded-full">
+                  👕 Tシャツ・パーカー
+                </span>
+                <span className="bg-amber-50 text-amber-900 border border-amber-200/60 text-xs font-semibold px-3 py-1 rounded-full">
+                  👜 トートバッグ
+                </span>
+                <span className="bg-amber-50 text-amber-900 border border-amber-200/60 text-xs font-semibold px-3 py-1 rounded-full">
+                  ☕ マグカップ
+                </span>
+                <span className="bg-amber-50 text-amber-900 border border-amber-200/60 text-xs font-semibold px-3 py-1 rounded-full">
+                  ✨ ステッカー
+                </span>
+              </div>
+
+              <Link
+                href="https://suzuri.jp/yamakado"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-amber-600 to-orange-500 hover:from-amber-700 hover:to-orange-600 text-white font-bold py-3.5 px-8 rounded-full shadow-lg hover:shadow-xl transition transform hover:-translate-y-0.5 text-base md:text-lg"
+              >
+                <span>SUZURI公式ショップを見る</span>
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ▼ 導入事例への誘導（またはお問い合わせ） */}
       <section className="py-20 px-6 text-center bg-gray-50">
         <div className="max-w-3xl mx-auto">
