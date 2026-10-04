@@ -166,31 +166,49 @@ export default function Home() {
               VOICE
             </span>
             <h2 className="text-3xl font-bold text-gray-800">
-              お客様の声
+              お客様の声・導入事例
             </h2>
             <p className="mt-3 text-gray-600">
-              ヤギレンタルをご利用いただいた皆様のリアルな体験談や癒やしのエピソード
+              ヤギレンタルをご利用いただいた企業様・個人様のリアルな体験談をご紹介します。
             </p>
           </div>
 
-          <div className="bg-gradient-to-br from-green-50/70 to-emerald-50/40 p-8 md:p-12 rounded-3xl border border-green-100 shadow-sm flex flex-col md:flex-row items-center justify-between gap-8">
-            <div className="flex-1 text-center md:text-left">
-              <div className="inline-block bg-amber-100 text-amber-800 text-xs font-bold px-3 py-1 rounded-full mb-4 border border-amber-200">
-                🍂 インタビュー順次公開中
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-3">
-                「静かで驚きの除草力！子どもや社員にも大人気でした」
-              </h3>
-              <p className="text-gray-600 leading-relaxed text-sm md:text-base">
-                工場の敷地除草や個人邸のお庭管理など、実際にヤギたちを迎えていただいたお客様の声・ビフォーアフターを順次掲載しています。
-              </p>
+          {/* 事例カード（株式会社デューコム 様） */}
+          <div className="bg-gradient-to-br from-green-50/70 via-emerald-50/30 to-amber-50/30 p-6 md:p-10 rounded-3xl border border-green-100/80 shadow-md hover:shadow-lg transition flex flex-col md:flex-row items-center gap-8">
+            {/* サムネイル画像 */}
+            <div className="relative w-full md:w-80 aspect-[16/10] md:aspect-[4/3] rounded-2xl overflow-hidden shadow-sm flex-shrink-0 bg-gray-100">
+              <Image
+                src="/yagi_voice_dyucom.jpg"
+                alt="株式会社デューコム様でのヤギ除草の様子"
+                fill
+                className="object-cover"
+              />
+              <span className="absolute top-3 left-3 bg-green-800/90 text-white text-xs font-bold px-3 py-1 rounded-full backdrop-blur-sm">
+                法人導入事例
+              </span>
             </div>
-            <div className="flex-shrink-0">
+
+            {/* テキストコンテンツ */}
+            <div className="flex-1 text-left">
+              <div className="flex flex-wrap items-center gap-2 mb-2">
+                <span className="text-sm font-bold text-green-800">
+                  株式会社デューコム 様
+                </span>
+                <span className="text-xs text-gray-500">
+                  （ヤギ3頭 / 2週間レンタル）
+                </span>
+              </div>
+              <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3 leading-snug">
+                「除草だけでなく社員の癒やしや会話のきっかけに。笑顔広がる敷地管理」
+              </h3>
+              <p className="text-gray-600 text-sm md:text-base leading-relaxed mb-6">
+                敷地内の急速な雑草に悩まれていた企業様。ヤギ3頭を迎えたことで、見違えるほどの除草効果はもちろん、社員の憩いや地域の子どもたちとの交流の場が生まれました。
+              </p>
               <Link
                 href="/voice"
-                className="inline-flex items-center gap-2 bg-green-700 hover:bg-green-800 text-white font-bold py-3.5 px-8 rounded-full shadow-md hover:shadow-lg transition transform hover:-translate-y-0.5"
+                className="inline-flex items-center gap-2 bg-green-700 hover:bg-green-800 text-white font-bold py-3 px-8 rounded-full shadow-md hover:shadow-lg transition transform hover:-translate-y-0.5 text-sm md:text-base"
               >
-                <span>お客様の声を見る</span>
+                <span>インタビュー記事を読む</span>
                 <span>→</span>
               </Link>
             </div>
