@@ -4,54 +4,127 @@ import Link from "next/link";
 export default function Home() {
   return (
     <main>
-      {/* ▼ ヒーローセクション（左右2分割レイアウト） */}
-      <section className="bg-gradient-to-b from-green-50/40 to-white py-12 md:py-20 px-6">
-        <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10 md:gap-16">
-          
-          {/* 左カラム：キャッチコピーとバナー */}
-          <div className="flex-1 text-center md:text-left flex flex-col items-center md:items-start order-2 md:order-1">
-            <div className="bg-yellow-50 text-amber-950 border border-yellow-200 px-6 py-4 rounded-2xl shadow-sm max-w-2xl mb-8 w-full">
-              <p className="text-lg md:text-xl font-bold flex items-center justify-center md:justify-start gap-2">
-                <span>🌻</span> 夏の除草シーズン真っ盛り！ <span>🌻</span>
-              </p>
-              <p className="mt-2 text-base leading-relaxed">
-                気温が上がり、急速に伸びる夏の雑草対策に！<br />
-                ヤギレンタルで手軽に、エコに除草しませんか？
-              </p>
-            </div>
-            
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-6 leading-tight text-gray-900">
-              除草だけじゃない、<br />
-              <span className="text-green-700">ヤギとふれあう</span>優しい時間。
-            </h1>
-            
-            <p className="text-lg md:text-xl mb-8 text-gray-600 font-medium leading-relaxed">
-              企業の敷地管理から、ご家庭のお庭まで。<br className="hidden md:inline" />
-              ただ草を刈るだけでなく、のんびりしたヤギたちとの温かいふれあいと癒やしをお届けします。
+      {/* ▼ ヒーローセクション（トップの大きな画像・秋冬仕様） */}
+      <div className="relative min-h-[620px] md:h-[680px] w-full flex items-center justify-center">
+        {/* 背景画像（秋冬仕様） */}
+        <Image
+          src="/hero-goat-autumn.jpg"
+          alt="秋晴れの草原で草を食むヤギ"
+          fill
+          className="object-cover"
+          priority
+        />
+
+        {/* 落ち着いたグラデーションフィルター */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/70"></div>
+
+        {/* キャッチコピー */}
+        <div className="relative z-10 flex flex-col items-center justify-center text-white px-4 text-center py-16 max-w-4xl mx-auto">
+          {/* 秋冬バナー */}
+          <div className="bg-amber-950/85 border border-amber-400/40 text-amber-100 px-6 py-4 rounded-2xl shadow-2xl backdrop-blur-md mb-8 max-w-2xl transform hover:scale-[1.01] transition-transform">
+            <p className="text-lg md:text-xl font-bold text-amber-300 flex items-center justify-center gap-2">
+              <span>🍂</span> 冬を迎える前の敷地管理に <span>🍂</span>
+            </p>
+            <p className="mt-2 text-sm md:text-base text-amber-100/90 leading-relaxed">
+              乾燥による枯れ草火災の予防や、来春の雑草抑制に。<br className="hidden sm:inline" />
+              冬前のすっきり除草・敷地管理のご予約を受け付けています。
             </p>
           </div>
 
-          {/* 右カラム：トリミングなしの3:4縦長画像 */}
-          <div className="flex-1 w-full max-w-md md:max-w-lg order-1 md:order-2">
-            <div className="relative aspect-[1774/2364] w-full bg-gray-100 rounded-3xl overflow-hidden shadow-2xl border border-gray-100">
-              <Image
-                src="/yagi_mainscreen_v2.jpg"
-                alt="夏の青空の下、草を食べるヤギ"
-                fill
-                className="object-cover"
-                priority
-              />
-            </div>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6 drop-shadow-lg leading-tight tracking-tight">
+            冬を迎える前に、<br className="sm:hidden" />
+            <span className="text-amber-300">すっきり整地。</span>
+          </h1>
+
+          <p className="text-lg sm:text-xl md:text-2xl mb-10 font-medium drop-shadow-md text-gray-100 max-w-2xl leading-relaxed">
+            企業の敷地管理・太陽光発電所から個人のお庭まで。<br />
+            乾燥する冬の火災対策＆来春の雑草予防に、<br className="hidden sm:inline" />
+            環境に優しく頼れる「エコ除草パートナー」です。
+          </p>
+
+          {/* CTAボタン群 */}
+          <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto justify-center">
+            <Link
+              href="/contact"
+              className="bg-amber-600 hover:bg-amber-500 text-white font-bold py-4 px-10 rounded-full shadow-xl transition-all duration-200 transform hover:-translate-y-0.5 text-lg flex items-center justify-center gap-2"
+            >
+              <span>無料お見積り・ご相談</span>
+              <span>→</span>
+            </Link>
+            <Link
+              href="/service"
+              className="bg-white/20 hover:bg-white/30 text-white border border-white/50 font-bold py-4 px-8 rounded-full backdrop-blur-md transition-all duration-200 text-lg flex items-center justify-center"
+            >
+              料金プランを見る
+            </Link>
+          </div>
+        </div>
+      </div>
+
+      {/* ▼ 秋冬のヤギ除草をおすすめする3つの理由 */}
+      <section className="py-20 px-6 bg-gradient-to-b from-amber-50/60 via-orange-50/30 to-white">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <span className="inline-block text-amber-700 bg-amber-100 font-bold px-4 py-1.5 rounded-full text-sm mb-4">
+              AUTUMN & WINTER SPECIAL
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 leading-tight">
+              なぜ今？ <br className="sm:hidden" />
+              秋冬にヤギ除草が選ばれる3つの理由
+            </h2>
+            <p className="mt-4 text-gray-600 text-base md:text-lg">
+              「草刈りは夏だけ」と思っていませんか？実は秋〜冬前の除草こそ、敷地保全とコスト削減の絶好のタイミングです。
+            </p>
           </div>
 
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* 理由1 */}
+            <div className="bg-white p-8 rounded-2xl shadow-md border border-amber-100 hover:shadow-lg transition">
+              <div className="w-14 h-14 bg-amber-100 text-amber-700 rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-sm">
+                🔥
+              </div>
+              <h3 className="text-xl font-bold mb-3 text-gray-800">
+                乾燥期の「枯れ草火災」を防ぐ
+              </h3>
+              <p className="text-gray-600 leading-relaxed text-sm md:text-base">
+                冬場は空気が乾燥し、放置された枯れ草にタバコや放火で火が燃え広がるリスクが急増します。秋のうちに綺麗に食べ尽くすことで、安心・安全な冬越しができます。
+              </p>
+            </div>
+
+            {/* 理由2 */}
+            <div className="bg-white p-8 rounded-2xl shadow-md border border-amber-100 hover:shadow-lg transition">
+              <div className="w-14 h-14 bg-amber-100 text-amber-700 rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-sm">
+                🌱
+              </div>
+              <h3 className="text-xl font-bold mb-3 text-gray-800">
+                来春の雑草発生・コストを抑制
+              </h3>
+              <p className="text-gray-600 leading-relaxed text-sm md:text-base">
+                秋のうちに多年生雑草をしっかり食べさせることで、根に養分が蓄えられるのを阻害。来年春〜夏の新芽の発生量を抑え、年間の除草費用を抑えられます。
+              </p>
+            </div>
+
+            {/* 理由3 */}
+            <div className="bg-white p-8 rounded-2xl shadow-md border border-amber-100 hover:shadow-lg transition">
+              <div className="w-14 h-14 bg-amber-100 text-amber-700 rounded-2xl flex items-center justify-center text-3xl mb-6 shadow-sm">
+                🛡️
+              </div>
+              <h3 className="text-xl font-bold mb-3 text-gray-800">
+                害虫・害獣の越冬場所をなくす
+              </h3>
+              <p className="text-gray-600 leading-relaxed text-sm md:text-base">
+                枯れ草の茂みは害虫や小動物（害獣）の越冬・隠れ家になりがちです。敷地の見通しをクリアに保つことで、防犯性や衛生環境も大幅に向上します。
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* ▼ 特徴セクション（文字大きめ・シンプル） */}
-      <section className="py-24 px-6 bg-gray-50">
+      {/* ▼ 特徴セクション（基本の3つのメリット） */}
+      <section className="py-20 px-6 bg-gray-50">
         <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-16 text-gray-800">
-            ヤギレンタルの<br className="md:hidden" />3つのメリット
+            ヤギレンタルの<br className="md:hidden" />3つの基本メリット
           </h2>
 
           <div className="grid md:grid-cols-3 gap-10">
@@ -85,29 +158,152 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ▼ 導入事例への誘導（またはお問い合わせ） */}
-      <section className="py-20 px-6 text-center">
-        <h2 className="text-3xl font-bold mb-8 text-gray-800">
-          まずはヤギに<br className="md:hidden" />触れてみませんか？
-        </h2>
-        <p className="text-xl text-gray-600 mb-10">
-          ふれあい体験も実施しています。<br />お気軽にお問い合わせください。
+      {/* ▼ お客様の声セクション */}
+      <section className="py-20 px-6 bg-white">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center max-w-2xl mx-auto mb-12">
+            <span className="inline-block text-green-800 bg-green-100 font-bold px-4 py-1.5 rounded-full text-sm mb-3">
+              VOICE
+            </span>
+            <h2 className="text-3xl font-bold text-gray-800">
+              お客様の声・導入事例
+            </h2>
+            <p className="mt-3 text-gray-600">
+              ヤギレンタルをご利用いただいた企業様・個人様のリアルな体験談をご紹介します。
+            </p>
+          </div>
 
-        </p>
-        <Link
-          href="/contact"
-          className="inline-block border-2 border-green-600 text-green-600 hover:bg-green-600 hover:text-white text-xl font-bold py-4 px-12 rounded-full transition"
-        >
-          お問い合わせ・ご相談
-        </Link>
+          {/* 事例カード（株式会社デューコム 様） */}
+          <div className="bg-gradient-to-br from-green-50/70 via-emerald-50/30 to-amber-50/30 p-6 md:p-10 rounded-3xl border border-green-100/80 shadow-md hover:shadow-lg transition flex flex-col md:flex-row items-center gap-8">
+            {/* サムネイル画像 */}
+            <div className="relative w-full md:w-80 aspect-[16/10] md:aspect-[4/3] rounded-2xl overflow-hidden shadow-sm flex-shrink-0 bg-gray-100">
+              <Image
+                src="/yagi_voice_dyucom.jpg"
+                alt="株式会社デューコム様でのヤギ除草の様子"
+                fill
+                className="object-cover"
+              />
+              <span className="absolute top-3 left-3 bg-green-800/90 text-white text-xs font-bold px-3 py-1 rounded-full backdrop-blur-sm">
+                法人導入事例
+              </span>
+            </div>
+
+            {/* テキストコンテンツ */}
+            <div className="flex-1 text-left">
+              <div className="flex flex-wrap items-center gap-2 mb-2">
+                <span className="text-sm font-bold text-green-800">
+                  株式会社デューコム 様
+                </span>
+                <span className="text-xs text-gray-500">
+                  （ヤギ3頭 / 2週間レンタル）
+                </span>
+              </div>
+              <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-3 leading-snug">
+                「除草だけでなく社員の癒やしや会話のきっかけに。笑顔広がる敷地管理」
+              </h3>
+              <p className="text-gray-600 text-sm md:text-base leading-relaxed mb-6">
+                敷地内の急速な雑草に悩まれていた企業様。ヤギ3頭を迎えたことで、見違えるほどの除草効果はもちろん、社員の憩いや地域の子どもたちとの交流の場が生まれました。
+              </p>
+              <Link
+                href="/voice"
+                className="inline-flex items-center gap-2 bg-green-700 hover:bg-green-800 text-white font-bold py-3 px-8 rounded-full shadow-md hover:shadow-lg transition transform hover:-translate-y-0.5 text-sm md:text-base"
+              >
+                <span>インタビュー記事を読む</span>
+                <span>→</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ▼ 公式オリジナルグッズ（SUZURI）セクション */}
+      <section className="py-20 px-6 bg-gradient-to-b from-amber-50/50 via-orange-50/20 to-white">
+        <div className="max-w-5xl mx-auto">
+          <div className="bg-white rounded-3xl p-6 md:p-12 shadow-xl border border-amber-100 flex flex-col md:flex-row items-center gap-8 md:gap-12">
+            {/* 左側：グッズ画像 */}
+            <div className="relative w-full md:w-1/2 aspect-[16/10] rounded-2xl overflow-hidden shadow-md flex-shrink-0 bg-amber-50">
+              <Image
+                src="/suzuri_goods_banner.jpg"
+                alt="山門牧場のヤギオリジナルグッズ（Tシャツ・トートバッグ・マグカップ・ステッカー等）"
+                fill
+                className="object-cover hover:scale-105 transition-transform duration-500"
+              />
+              <span className="absolute top-3 left-3 bg-amber-700 text-white text-xs font-bold px-3 py-1 rounded-full shadow-sm">
+                OFFICIAL GOODS
+              </span>
+            </div>
+
+            {/* 右側：テキストとボタン */}
+            <div className="flex-1 text-center md:text-left">
+              <span className="inline-block text-amber-800 bg-amber-100 font-bold px-3.5 py-1 rounded-full text-xs md:text-sm mb-3">
+                🛍️ オンラインストア限定販売
+              </span>
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight mb-4">
+                山門牧場の<br className="hidden sm:inline" />
+                <span className="text-amber-700">オリジナルヤギグッズ</span>登場！
+              </h2>
+              <p className="text-gray-600 text-sm md:text-base leading-relaxed mb-6">
+                日常にヤギたちの癒やしをお届けする公式グッズができました！<br />
+                定番のTシャツやパーカー、毎日使えるトートバッグ、可愛いステッカーやマグカップなど豊富なアイテムをご用意しています。
+              </p>
+
+              {/* アイテムタグ */}
+              <div className="flex flex-wrap justify-center md:justify-start gap-2 mb-8">
+                <span className="bg-amber-50 text-amber-900 border border-amber-200/60 text-xs font-semibold px-3 py-1 rounded-full">
+                  👕 Tシャツ・パーカー
+                </span>
+                <span className="bg-amber-50 text-amber-900 border border-amber-200/60 text-xs font-semibold px-3 py-1 rounded-full">
+                  👜 トートバッグ
+                </span>
+                <span className="bg-amber-50 text-amber-900 border border-amber-200/60 text-xs font-semibold px-3 py-1 rounded-full">
+                  ☕ マグカップ
+                </span>
+                <span className="bg-amber-50 text-amber-900 border border-amber-200/60 text-xs font-semibold px-3 py-1 rounded-full">
+                  ✨ ステッカー
+                </span>
+              </div>
+
+              <Link
+                href="https://suzuri.jp/yamakado"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-amber-600 to-orange-500 hover:from-amber-700 hover:to-orange-600 text-white font-bold py-3.5 px-8 rounded-full shadow-lg hover:shadow-xl transition transform hover:-translate-y-0.5 text-base md:text-lg"
+              >
+                <span>SUZURI公式ショップを見る</span>
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ▼ 導入事例への誘導（またはお問い合わせ） */}
+      <section className="py-20 px-6 text-center bg-gray-50">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-3xl font-bold mb-6 text-gray-800">
+            まずは現地確認・お見積りから<br className="md:hidden" />お気軽にご相談ください
+          </h2>
+          <p className="text-lg md:text-xl text-gray-600 mb-8 leading-relaxed">
+            「どのくらいの頭数が必要？」「うちの敷地でも大丈夫？」など、<br className="hidden sm:inline" />
+            スタッフが丁寧にご案内いたします。ふれあい見学も大歓迎です！
+          </p>
+          <Link
+            href="/contact"
+            className="inline-block bg-green-700 hover:bg-green-800 text-white text-xl font-bold py-4 px-12 rounded-full shadow-lg hover:shadow-xl transition transform hover:-translate-y-0.5"
+          >
+            お問い合わせ・無料お見積り
+          </Link>
+        </div>
       </section>
 
       {/* ▼ お知らせ：SNSはじめました */}
-      <section className="pb-16 px-6">
-        <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between bg-white px-8 py-6 rounded-2xl shadow-sm border border-gray-100 gap-6">
+      <section className="pb-16 px-6 bg-white pt-10">
+        <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between bg-gray-50 px-8 py-6 rounded-2xl shadow-sm border border-gray-100 gap-6">
           <div className="flex items-center">
             {/* スマホアイコン（グラデーション） */}
-            <div className="mr-5 bg-gradient-to-tr from-green-600 to-emerald-400 p-2.5 rounded-xl text-white shadow-sm flex items-center justify-center">
+            <div className="mr-5 bg-gradient-to-tr from-green-600 to-emerald-400 p-2.5 rounded-xl text-white shadow-sm flex items-center justify-center flex-shrink-0">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-7 h-7">
                 <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
                 <line x1="12" y1="18" x2="12.01" y2="18" />
@@ -116,7 +312,7 @@ export default function Home() {
             <div>
               <h2 className="text-xl md:text-2xl font-bold mb-1 text-gray-800">SNSやってます！</h2>
               <p className="text-gray-600 text-sm md:text-base">
-                日々のヤギたちの日常を動画や写真でお届け中🐐✨
+                冬毛でモコモコになっていくヤギたちの可愛い日常をお届け中🐐🍁
               </p>
             </div>
           </div>
@@ -125,7 +321,7 @@ export default function Home() {
               href="https://www.instagram.com/yamakado_suzuka?igsh=dWtob3V0eGNsdzYw"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 bg-gradient-to-r from-pink-500 to-red-500 text-white hover:opacity-90 font-bold py-2.5 px-6 rounded-full shadow-sm transition-all text-sm md:text-base"
+              className="flex items-center justify-center gap-2 w-36 sm:w-40 bg-gradient-to-r from-pink-500 to-red-500 text-white hover:opacity-90 font-bold py-2.5 rounded-full shadow-sm transition-all text-sm md:text-base"
             >
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
                 <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
@@ -138,7 +334,7 @@ export default function Home() {
               href="https://www.tiktok.com/@yamakado_farm"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 bg-black text-white hover:bg-gray-900 font-bold py-2.5 px-6 rounded-full shadow-sm transition-all text-sm md:text-base border border-gray-800"
+              className="flex items-center justify-center gap-2 w-36 sm:w-40 bg-black text-white hover:bg-gray-900 font-bold py-2.5 rounded-full shadow-sm transition-all text-sm md:text-base border border-gray-800"
             >
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
                 <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 3.16-4.51V9.42a6.35 6.35 0 0 0-6.33 6.32A6.35 6.35 0 0 0 10.33 22c4.66 0 7.49-3.25 7.49-7.49V8.04A4.8 4.8 0 0 0 22 9.38V6.69a4.8 4.8 0 0 1-2.41-.69z"/>

@@ -40,6 +40,15 @@ export default function Header() {
                         お客様の声
                     </Link>
                     <Link
+                        href="https://suzuri.jp/yamakado"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-green-600 transition flex items-center gap-1.5"
+                    >
+                        <span>グッズ</span>
+                        <span className="text-xs bg-amber-100 text-amber-800 px-1.5 py-0.5 rounded-full font-bold">New</span>
+                    </Link>
+                    <Link
                         href="/contact"
                         className="bg-green-600 text-white font-bold py-2.5 px-6 rounded-full shadow-md hover:bg-green-700 transition"
                     >
@@ -99,6 +108,17 @@ export default function Header() {
                         className="text-xl font-bold text-gray-700 py-3 border-b border-gray-100"
                     >
                         お客様の声
+                    </Link>
+
+                    <Link
+                        href="https://suzuri.jp/yamakado"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={closeMenu}
+                        className="text-xl font-bold text-gray-700 py-3 border-b border-gray-100 flex items-center justify-between"
+                    >
+                        <span>オリジナルグッズ 🛍️</span>
+                        <span className="text-xs bg-amber-100 text-amber-800 px-2.5 py-1 rounded-full font-bold">SUZURI店</span>
                     </Link>
 
                     {/* スマホメニュー内のデカいお問い合わせボタン */}
