@@ -92,6 +92,7 @@ export default function ContactPage() {
             <option value="" disabled>-- 選択してください --</option>
             <option value="知人から">知人から</option>
             <option value="Instagramから">Instagramから</option>
+            <option value="TikTokから">TikTokから</option>
             <option value="その他">その他</option>
           </select>
         </div>
