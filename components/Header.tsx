@@ -11,46 +11,46 @@ export default function Header() {
     const closeMenu = () => setIsOpen(false);
 
     return (
-        <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100 shadow-sm">
-            <div className="max-w-6xl mx-auto px-4 h-20 flex items-center justify-between">
+        <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-sm">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between gap-4">
 
                 {/* ▼ 左側：ロゴ */}
                 <Link
                     href="/"
                     onClick={closeMenu}
-                    className="text-sm sm:text-lg md:text-2xl font-bold text-green-800 hover:opacity-80 transition flex items-center gap-2"
+                    className="text-base sm:text-lg lg:text-xl xl:text-2xl font-bold text-green-800 hover:opacity-80 transition flex items-center gap-2 whitespace-nowrap flex-shrink-0"
                 >
                     <span>🐐</span>
                     <span>ヤギレンタル｜山門牧場@鈴鹿</span>
                 </Link>
 
-                {/* ▼ PC用メニュー（スマホでは隠す） */}
-                <nav className="hidden md:flex items-center gap-8 text-lg font-medium text-gray-700">
-                    <Link href="/service" className="hover:text-green-600 transition">
+                {/* ▼ PC用メニュー（画面幅に応じて自動調整・絶対改行なし） */}
+                <nav className="hidden md:flex items-center gap-3 lg:gap-6 xl:gap-8 text-sm lg:text-base xl:text-lg font-medium text-gray-700 whitespace-nowrap flex-shrink-0">
+                    <Link href="/service" className="hover:text-green-600 transition whitespace-nowrap">
                         ヤギレンタル
                     </Link>
 
-                    <Link href="/about-goat" className="hover:text-green-600 transition">
+                    <Link href="/about-goat" className="hover:text-green-600 transition whitespace-nowrap">
                         ヤギの生態
                     </Link>
-                    <Link href="/access" className="hover:text-green-600 transition">
+                    <Link href="/access" className="hover:text-green-600 transition whitespace-nowrap">
                         アクセス
                     </Link>
-                    <Link href="/voice" className="hover:text-green-600 transition">
+                    <Link href="/voice" className="hover:text-green-600 transition whitespace-nowrap">
                         お客様の声
                     </Link>
                     <Link
                         href="https://suzuri.jp/yamakado"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="hover:text-green-600 transition flex items-center gap-1.5"
+                        className="hover:text-amber-700 transition flex items-center gap-1 text-amber-800 whitespace-nowrap"
                     >
                         <span>グッズ</span>
-                        <span className="text-xs bg-amber-100 text-amber-800 px-1.5 py-0.5 rounded-full font-bold">New</span>
+                        <span className="text-[10px] lg:text-xs bg-amber-100 text-amber-800 px-1.5 py-0.5 rounded-full font-bold">New</span>
                     </Link>
                     <Link
                         href="/contact"
-                        className="bg-green-600 text-white font-bold py-2.5 px-6 rounded-full shadow-md hover:bg-green-700 transition"
+                        className="bg-green-600 text-white font-bold py-2 px-4 lg:py-2.5 lg:px-6 rounded-full shadow-md hover:bg-green-700 transition whitespace-nowrap text-sm lg:text-base"
                     >
                         お問い合わせ
                     </Link>
@@ -58,7 +58,7 @@ export default function Header() {
 
                 {/* ▼ スマホ用ハンバーガーボタン（PCでは隠す） */}
                 <button
-                    className="md:hidden p-2 text-gray-600 focus:outline-none"
+                    className="md:hidden p-2 text-gray-600 focus:outline-none flex-shrink-0"
                     onClick={() => setIsOpen(!isOpen)} // クリックで反転
                     aria-label="メニューを開く"
                 >
@@ -117,8 +117,8 @@ export default function Header() {
                         onClick={closeMenu}
                         className="text-xl font-bold text-gray-700 py-3 border-b border-gray-100 flex items-center justify-between"
                     >
-                        <span>オリジナルグッズ 🛍️</span>
-                        <span className="text-xs bg-amber-100 text-amber-800 px-2.5 py-1 rounded-full font-bold">SUZURI店</span>
+                        <span>オリジナルグッズ</span>
+                        <span className="text-xs bg-amber-100 text-amber-800 px-2.5 py-1 rounded-full font-bold">SUZURI</span>
                     </Link>
 
                     {/* スマホメニュー内のデカいお問い合わせボタン */}
